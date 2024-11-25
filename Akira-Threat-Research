@@ -1,0 +1,38 @@
+🔐 Akira Ransomware:
+
+Initial Access:
+Akira ransomware often gains access through VPN vulnerabilities (CVE-2020-3259, CVE-2023-20269), RDP, spear-phishing, and stolen credentials.
+
+Persistence and Discovery:
+Once inside, Akira actors create new domain accounts (e.g., itadm) and use tools like Mimikatz and LaZagne to extract credentials. They also use SoftPerfect and Advanced IP Scanner for network discovery and gather domain information with Windows commands.
+
+Defense Evasion:
+To avoid detection, Akira disables security software and uses PowerTool to exploit vulnerabilities, enabling them to operate undetected.
+
+Exfiltration and Impact:
+Akira exfiltrates data using tools like FileZilla, WinRAR, and cloud services. They deploy a double-extortion model: data is encrypted and a ransom note is provided. Payments are demanded in Bitcoin.
+
+Encryption:
+Akira uses a hybrid encryption scheme combining ChaCha20 and RSA. Files are encrypted and marked with the .akira or .powerranges extension. The malware also deletes volume shadow copies to hinder recovery.
+
+Indicators of Compromises:
+
+MD5 - [e57340a208ac9d95a1f015a5d6d98b94]
+ [e8139b0bc60a930586cf3af6fa5ea573]
+ [a1f4931992bf05e9bff4b173c15cab15]
+ [08bd63480cd313d2e219448ac28f72cd]
+ [4aecef9ddc8d07b82a6902b27f051f34]
+ [ab9e577334aeb060ac402598098e13b9]
+
+Contacted IP address: 20[.]99[.]185[.]48
+
+File name: akira_readme.txt [e78d30c7e5a835850069b709f8cd2b7d5480bcf6be9f8ef29c3fae68effb3125]
+
+DNS Resolutions: res[.]public[.]onecdn[.]static[.]microsoft
+
+Processes created: 
+%SAMPLEPATH%\87b4020bcd3fad1f5711e6801ca269ef5852256eeaf350f4dde2dc46c576262d[.]exe
+%SAMPLEPATH%\e57340a208ac9d95a1f015a5d6d98b94[.]exe
+
+Network Communication: 
+akiral2iz6a7qgd3ayp3l6yub7xx2uep76idk3u2kollpj5z3z636bad[.]onion
